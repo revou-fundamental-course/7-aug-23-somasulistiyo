@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RevoU Test - Soma Sulistiyo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div>
+    <div class="container-fluid mt-5 pt-3 pb-3 text-white" style="text-align: center; background-color: #17a2b8; border: 1px solid;">
+        <h3>LUAS SEGITIGA</h3>
+    </div>
+    <div class="container">
+        <div class="text-center"><img src="assets/luas-segitiga.png" style="width: 200px; height: 200px;"></div>
+        <div>
+            <p>Rumus luas segitiga yaitu :</p>
+            <div class="text-center font-weight-bold"> L = 1/2 x a x t</div>
+            <p>Dimana :
+                <br>L = Luas
+                <br>a = Panjang Alas
+                <br>t = Tinggi</p>
+        </div>
+    </div>
+    <div class="container">
+        <div>
+            <h4 class="text-center py-3">Hitung Luas Segitiga</h4>
+            <div class="my-3"><input class="form-control" type="number" name="alas" id="luas-alas" placeholder="Masukkan nilai alas" required></div>
+            <div class="my-3"><input class="form-control" type="number" name="tinggi" id="luas-tinggi" placeholder="Masukkan nilai tinggi" required></div>
+            <div id="detailRumus"></div>
+            <div class="text-center mt-3"><button onclick="hitungLuas()" class="btn btn-primary">Hitung</button></div>
+            <div class="text-right"><button onclick="resetLuas()" class="btn btn-warning">Reset</button></div>
+        </div>
+    </div>
+    </div>
+
+
+    <div>
+        <div class="container-fluid mt-5 pt-3 pb-3 text-white" style="text-align: center; background-color: #17a2b8; border: 1px solid;">
+            <h3>KELILING SEGITIGA</h3>
+        </div>
+        <div class="container">
+            <div class="text-center"><img src="assets/keliling-segitiga.png" style="width: 200px; height: 200px;"></div>
+            <div>
+                <p>Rumus keliling segitiga yaitu :</p>
+                <div class="text-center font-weight-bold"> K = S1 + S2 + S3</div>
+                <p>Dimana :
+                    <br>K = Keliling
+                    <br>S1 = Sisi A
+                    <br>S2 = Sisi B
+                    <br>S3 = Sisi C</p>
+            </div>
+        </div>
+        <div class="container">
+            <div>
+                <h4 class="text-center py-3">Hitung Keliling Segitiga</h4>
+                <div class="my-3"><input class="form-control" type="number" name="s-si-a" id="sisi-a" placeholder="Masukkan nilai sisi A" required></div>
+                <div class="my-3"><input class="form-control" type="number" name="sisi-b" id="sisi-b" placeholder="Masukkan nilai sisi B" required></div>
+                <div class="my-3"><input class="form-control" type="number" name="sisi-c" id="sisi-c" placeholder="Masukkan nilai sisi C" required></div>
+
+                <div id="detailRumus"></div>
+                <div class="text-center mt-3"><button onclick="hitungKeliling()" class="btn btn-primary">Hitung</button></div>
+                <div class="text-right"><button onclick="resetKeliling()" class="btn btn-warning">Reset</button></div>
+            </div>
+        </div>
+        </div>
+
+</body>
+
+</html>
+<script src="js/script.js"></script>
