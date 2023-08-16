@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RevoU Test - Soma Sulistiyo</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </head>
 
 <body>
@@ -56,11 +57,11 @@
         <div class="container">
             <div>
                 <h4 class="text-center py-3">Hitung Keliling Segitiga</h4>
-                <div class="my-3"><input class="form-control" type="number" name="s-si-a" id="sisi-a" placeholder="Masukkan nilai sisi A" required></div>
+                <div class="my-3"><input class="form-control" type="number" name="sisi-a" id="sisi-a" placeholder="Masukkan nilai sisi A" required></div>
                 <div class="my-3"><input class="form-control" type="number" name="sisi-b" id="sisi-b" placeholder="Masukkan nilai sisi B" required></div>
                 <div class="my-3"><input class="form-control" type="number" name="sisi-c" id="sisi-c" placeholder="Masukkan nilai sisi C" required></div>
 
-                <div id="detailRumus"></div>
+                <div id="detailRumusKeliling"></div>
                 <div class="text-center mt-3"><button onclick="hitungKeliling()" class="btn btn-primary">Hitung</button></div>
                 <div class="text-right"><button onclick="resetKeliling()" class="btn btn-warning">Reset</button></div>
             </div>
