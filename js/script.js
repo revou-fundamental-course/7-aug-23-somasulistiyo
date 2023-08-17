@@ -1,19 +1,30 @@
-function hitungLuas() {
-    const alas = document.getElementById("luas-alas").value;
-    const tinggi = document.getElementById("luas-tinggi").value;
-    var detailRumus = document.getElementById("detailRumus");
-    
-    var detail = '';
 
+function hitungLuas() {
+    var alas = $('#luas-alas').val();
+    var tinggi = $('#luas-tinggi').val();;
+    var detailRumus = document.getElementById("detailRumus");
+
+    if(alas === '' || alas === null)
+    {
+      alert('Nilai alas tidak boleh kosong!')
+    }
+    else if(tinggi === '' || tinggi === null)
+    {
+      alert('Nilai tinggi tidak boleh kosong!')
+    }
+    else {
     const luas = (alas * tinggi)/2;
 
-    detail += '<p>L = 1/2 x a x t</p>';
-    detail += '<p>L = 1/2 x '+alas+' x '+tinggi+'</p>';
-    detail += '<p>L = '+luas+'</p>';
+    const p = document.createElement('p');
+    p.innerText += 'L = 1/2 x a x t';
+    p.innerText += '\n L = 1/2 x '+alas+' x '+tinggi+'';
     
-    detailRumus.append(detail);
-    console.log(alas);
-    console.log(tinggi);
+    const b = document.createElement('b');
+    b.innerText += 'L = '+luas+'';
+    
+    detailRumus.append(p);
+    detailRumus.append(b);
+    }
 
   }
 
@@ -21,27 +32,43 @@ function hitungLuas() {
     document.getElementById("luas-alas").value = '';
     document.getElementById("luas-tinggi").value = '';
 
-    var detailRumus = document.getElementById("detailRumus");
-    detailRumus.append('');
+    $('#detailRumus').empty();
 
   }
 
   function hitungKeliling() {
-    const a = document.getElementById("sisi-a").value;
-    const b = document.getElementById("sisi-b").value;
-    const c = document.getElementById("sisi-c").value;
+    const a = $('#sisi-a').val();
+    const b = $('#sisi-b').val();
+    const c = $('#sisi-c').val();
 
     var detailRumusKeliling = document.getElementById("detailRumusKeliling");
-    
-    var detail = '';
 
-    const keliling = (parseInt(a) + parseInt(b) + parseInt(c));
-
-    detail += '<p>L = S1 x S2 x S3</p>';
-    detail += '<p>L = '+a+' + '+b+' + '+c+'</p>';
-    detail += '<p>L = '+keliling+'</p>';
+    if(a === '' || a === null)
+    {
+      alert('Nilai Sisi A tidak boleh kosong!')
+    }
+    else if(b === '' || b === null)
+    {
+      alert('Nilai Sisi B tidak boleh kosong!')
+    }
+    else if(c === '' || c === null)
+    {
+      alert('Nilai Sisi C tidak boleh kosong!')
+    }
+    else {
+      const keliling = (parseInt(a) + parseInt(b) + parseInt(c));
+  
+      const p = document.createElement('p');
+      p.innerText += 'K = S1 + S2 + S3';
+      p.innerText += '\n K = '+a+' + '+b+' + '+c+'';
+      
+      const bold = document.createElement('b');
+      bold.innerText += 'K = '+keliling+'';
     
-    detailRumusKeliling.append(detail);
+      detailRumusKeliling.append(p);
+      detailRumusKeliling.append(bold);
+      
+    }
   
 
   }
@@ -51,7 +78,6 @@ function hitungLuas() {
     document.getElementById("sisi-b").value = '';
     document.getElementById("sisi-c").value = '';
 
-    var detailRumus = document.getElementById("detailRumusKeliling");
-    detailRumus.reset();
-
+    $('#detailRumusKeliling').empty();
   }
+
